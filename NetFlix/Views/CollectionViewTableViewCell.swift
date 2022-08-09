@@ -56,6 +56,10 @@ class CollectionViewTableViewCell: UITableViewCell {
         }
         
     }
+    
+    private func downloadTitleAt(indexPath: IndexPath) {
+        print("Downing \(titles[indexPath.row].original_title)")
+    }
 }
 extension CollectionViewTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -101,6 +105,19 @@ extension CollectionViewTableViewCell: UICollectionViewDelegate, UICollectionVie
                 print(error)
             }
         }
+    }
+    
+    // 长按显示按钮
+    func collectionView(_ collectionView: UICollectionView, contextMenuConfigurationForItemAt indexPath: IndexPath, point: CGPoint) -> UIContextMenuConfiguration? {
+        
+        let config = UIContextMenuConfiguration(identifier: nil, previewProvider: nil) {  [weak self] _ in
+            let downloadAction = UIAction(title: "Download", subtitle: nil, image: nil, identifier: nil, discoverabilityTitle: nil, attributes: [], state: .off) { _ in
+                self?.downloadTitleAt(indexPath: indexPath)
+            }
+            return UIMenu(title: "", image: nil, identifier: nil, options: .displayInline, children: [downloadAction])
+        }
+        
+        return config
     }
 }
 
