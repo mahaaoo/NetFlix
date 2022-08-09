@@ -41,7 +41,6 @@ class HomeViewController: UIViewController {
         
         homeFeedTable.tableHeaderView = headerView
         
-//        fetchData()
     }
     
     private func configurNavBar() {
@@ -64,34 +63,6 @@ class HomeViewController: UIViewController {
         homeFeedTable.frame = view.bounds
     }
     
-    
-    private func fetchData() {
-//        APICaller.shared.getTrendingMovies { results in
-//            switch results {
-//            case .success(let movies):
-//                print(movies)
-//            case .failure(let error):
-//                print(error)
-//            }
-//        }
-        
-        
-//        APICaller.shared.getTrendingTvs { results in
-//            //
-//            print(results)
-//        }
-        
-//        APICaller.shared.getUpcomingMoives { results in
-//            print(results)
-//        }
-//        APICaller.shared.getPopularMoives { results in
-//            print(results)
-//        }
-        APICaller.shared.getTopRated { results in
-            print(results)
-        }
-    }
-
 }
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
