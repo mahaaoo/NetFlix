@@ -41,13 +41,14 @@ class HeroHeaderUIView: UIView {
         return imageView
     }()
     
-    
+    // 设置渐变
     private func addGradient() {
         let gradientLayer = CAGradientLayer()
         gradientLayer.colors = [
             UIColor.clear.cgColor,
             UIColor.systemBackground.cgColor,
         ]
+        // 渐变生效范围
         gradientLayer.frame = bounds
         layer.addSublayer(gradientLayer)
     }
