@@ -33,6 +33,8 @@
 		982678EB28A26ED90013B18F /* YoutubeSearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982678EA28A26ED90013B18F /* YoutubeSearchResponse.swift */; };
 		982678ED28A270D60013B18F /* TitlePreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982678EC28A270D60013B18F /* TitlePreviewViewController.swift */; };
 		982678EF28A273290013B18F /* TitlePreviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982678EE28A273290013B18F /* TitlePreviewViewModel.swift */; };
+		982678F228A35A390013B18F /* NetFlixModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 982678F028A35A390013B18F /* NetFlixModel.xcdatamodeld */; };
+		982678F428A35BCE0013B18F /* DataPersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982678F328A35BCE0013B18F /* DataPersistenceManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +83,8 @@
 		982678EA28A26ED90013B18F /* YoutubeSearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeSearchResponse.swift; sourceTree = "<group>"; };
 		982678EC28A270D60013B18F /* TitlePreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitlePreviewViewController.swift; sourceTree = "<group>"; };
 		982678EE28A273290013B18F /* TitlePreviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitlePreviewViewModel.swift; sourceTree = "<group>"; };
+		982678F128A35A390013B18F /* NetFlixModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NetFlixModel.xcdatamodel; sourceTree = "<group>"; };
+		982678F328A35BCE0013B18F /* DataPersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPersistenceManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +148,7 @@
 				9826789828A103D00013B18F /* Assets.xcassets */,
 				9826789A28A103D00013B18F /* LaunchScreen.storyboard */,
 				9826789D28A103D00013B18F /* Info.plist */,
+				982678F028A35A390013B18F /* NetFlixModel.xcdatamodeld */,
 			);
 			path = NetFlix;
 			sourceTree = "<group>";
@@ -215,6 +220,7 @@
 			isa = PBXGroup;
 			children = (
 				982678D328A22CD40013B18F /* APICaller.swift */,
+				982678F328A35BCE0013B18F /* DataPersistenceManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -377,8 +383,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				982678F228A35A390013B18F /* NetFlixModel.xcdatamodeld in Sources */,
 				982678E328A2554B0013B18F /* TitleTableViewCell.swift in Sources */,
 				982678C728A106F00013B18F /* SearchViewController.swift in Sources */,
+				982678F428A35BCE0013B18F /* DataPersistenceManager.swift in Sources */,
 				982678DC28A2452E0013B18F /* TitleCollectionViewCell.swift in Sources */,
 				9826789428A103CD0013B18F /* MainTabBarViewController.swift in Sources */,
 				982678D028A112140013B18F /* CollectionViewTableViewCell.swift in Sources */,
@@ -749,6 +757,19 @@
 			productName = SDWebImageMapKit;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		982678F028A35A390013B18F /* NetFlixModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				982678F128A35A390013B18F /* NetFlixModel.xcdatamodel */,
+			);
+			currentVersion = 982678F128A35A390013B18F /* NetFlixModel.xcdatamodel */;
+			path = NetFlixModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 9826788428A103CD0013B18F /* Project object */;
 }
